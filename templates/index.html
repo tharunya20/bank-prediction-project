@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bank Prediction System</title>
+
+    <style>
+        *{
+            margin:0;
+            padding:0;
+            box-sizing:border-box;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        body{
+            height:100vh;
+            display:flex;
+            justify-content:center;
+            align-items:center;
+            background: linear-gradient(135deg,#4facfe,#00f2fe);
+        }
+
+        .container{
+               width:420px;
+            background:white;
+            padding:35px;
+            border-radius:20px;
+            box-shadow:0 10px 25px rgba(0,0,0,0.2);
+            text-align:center;
+        }
+
+        h1{
+            color:#333;
+            margin-bottom:10px;
+        }
+
+        p{
+            color:gray;
+            margin-bottom:25px;
+        }
+
+        .input-box{
+            width:100%;
+            margin-bottom:15px;
+        }
+
+        input{
+            width:100%;
+            padding:12px;
+            border:1px solid #ccc;
+            border-radius:10px;
+            font-size:15px;
+            outline:none;
+            transition:0.3s;
+        }
+
+        input:focus{
+            border-color:#4facfe;
+            box-shadow:0 0 8px rgba(79,172,254,0.5);
+        }
+
+        button{
+            width:100%;
+            padding:12px;
+            border:none;
+            border-radius:10px;
+            background:#4facfe;
+            color:white;
+            font-size:16px;
+            cursor:pointer;
+            transition:0.3s;
+        }
+        button:hover{
+            background:#008cff;
+        }
+
+        .result{
+            margin-top:20px;
+            font-size:20px;
+            color:#222;
+            font-weight:bold;
+        }
+
+        .footer{
+            margin-top:15px;
+            color:gray;
+            font-size:13px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+
+        <h1>Bank Prediction System</h1>
+        <p>Machine Learning Flask Project</p>
+
+        <form action="/predict" method="post">
+
+           <div class="input-box">
+    <label>Age</label>
+    <input type="text" name="f1" required>
+</div>
+
+<div class="input-box">
+    <label>Account Balance</label>
+    <input type="text" name="f2" required>
+</div>
+
+<div class="input-box">
+    <label>Salary</label>
+    <input type="text" name="f3" required>
+</div>
+
+<div class="input-box">
+    <label>Loan Amount</label>
+    <input type="text" name="f4" required>
+</div>
+
+            <button type="submit">Predict</button>
+
+        </form>
+
+        <div class="result">
+            {{ prediction_text }}
+        </div>
+
+        <div class="footer">
+            Developed using Flask + Machine Learning
+        </div>
+
+    </div>
+
+</body>
+</html>
