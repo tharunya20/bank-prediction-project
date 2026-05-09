@@ -19,6 +19,19 @@ A Machine Learning based Bank Prediction Web Application built using Flask and X
 - Git & GitHub
 - Render
 
+
+## Screenshots
+
+### Home Page
+![Home](screenshots/homepage.png)
+
+### Input Data
+![Input](screenshots/input-data.png)
+
+### Prediction Result
+![Prediction](screenshots/prediction-result.png)
+
+
 ## Live Demo
 
 https://bank-prediction-project.onrender.com
